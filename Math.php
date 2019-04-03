@@ -3,8 +3,8 @@ class Math{
 		
     public static function factorial(int $number): array
     {
-        if($number > 20){
-            throw new InvalidArgumentException('Value must be less than 20');
+        if($number > 20 || $number < 0){
+            throw new InvalidArgumentException('Value must be less than 20 and greater than 0');
         }
 
         return self::generateFactorial($number, [
